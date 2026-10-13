@@ -1,3 +1,10 @@
 <Solution>
+  <Folder Name="/Core/">
+    <Project Path="BidStream.Application/BidStream.Application.csproj" />
+    <Project Path="BidStream.Domain/BidStream.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="BidStream.Infrastructure/BidStream.Infrastructure.csproj" Id="aa27e13c-c4b0-4680-b2d1-abb5bc25fb29" />
+  </Folder>
   <Project Path="BidStream.API/BidStream.API.csproj" />
 </Solution>

@@ -1,4 +1,9 @@
+using BidStream.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services
+    .AddInfrastructureDependencies(builder.Configuration);
 
 // Add services to the container.
 
