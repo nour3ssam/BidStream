@@ -13,6 +13,7 @@ namespace BidStream.Infrastructure
                 
         }
         public DbSet<Category> Categories => Set<Category>();
+        public DbSet<Item> Items => Set<Item>();
 
     }
 }
