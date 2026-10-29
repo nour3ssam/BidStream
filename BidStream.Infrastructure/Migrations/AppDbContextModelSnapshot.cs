@@ -57,7 +57,7 @@ namespace BidStream.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("BidStream.Domain.Entities.Item", b =>
@@ -103,7 +103,7 @@ namespace BidStream.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Items", (string)null);
+                    b.ToTable("Items");
                 });
 
             modelBuilder.Entity("BidStream.Domain.Entities.Item", b =>
@@ -111,7 +111,7 @@ namespace BidStream.Infrastructure.Migrations
                     b.HasOne("BidStream.Domain.Entities.Category", "Category")
                         .WithMany("Items")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");

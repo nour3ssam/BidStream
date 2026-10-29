@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace BidStream.Infrastructure
@@ -12,6 +13,13 @@ namespace BidStream.Infrastructure
         {
                 
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
         public DbSet<Category> Categories => Set<Category>();
         public DbSet<Item> Items => Set<Item>();
 
