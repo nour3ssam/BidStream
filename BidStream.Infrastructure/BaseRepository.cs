@@ -1,4 +1,4 @@
-﻿using BidStream.Application.Interfaces.Repositories;
+﻿using BidStream.Application.Interfaces;
 using BidStream.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace BidStream.Infrastructure.Repositories
+namespace BidStream.Infrastructure
 {
     internal class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
